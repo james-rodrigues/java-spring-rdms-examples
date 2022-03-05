@@ -1,13 +1,15 @@
-package net.database.example.r2dbc.repository;
-
-import net.database.example.r2dbc.models.Customer;
-import org.springframework.data.r2dbc.repository.Query;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-import reactor.core.publisher.Flux;
-
-public interface CustomerRepository extends ReactiveCrudRepository<Customer, Long> {
-
-    @Query("SELECT * FROM customer WHERE last_name = :lastname")
-    Flux<Customer> findByLastName(String lastName);
-
-}
+//package net.database.example.r2dbc.repository;
+//
+//import net.database.example.r2dbc.models.Customer;
+//import org.springframework.data.r2dbc.repository.Query;
+//import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+//import org.springframework.stereotype.Repository;
+//import reactor.core.publisher.Flux;
+//
+//@Repository
+//public interface CustomerRepository extends ReactiveCrudRepository<Customer, Long> {
+//
+//    @Query("SELECT * FROM customer WHERE last_name = :lastname")
+//    Flux<Customer> findByLastName(String lastName);
+//
+//}
